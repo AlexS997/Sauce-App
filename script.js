@@ -93,3 +93,32 @@ const startAnimation = () => {
 }
 
 preloadImage()
+
+const tl2 = gsap.timeline({
+    scrollTrigger:{
+        trigger: ".page2",
+        start: "5% 95%",
+        end: "103% 95%",
+        scrub: true
+    }
+})
+
+tl2.from("#headingDiv h2", {
+    color:"#52300f",
+    stagger: 0.5,
+    duration: 0.5
+})
+.from("#item", {
+    left: "50%",
+    stagger: 0.3,
+    duration: 1.5
+})
+.from(".box h3", {
+    color:"#52300f",
+    stagger: 0.5,
+    duration: 0.7
+})
+.from(".bottomBox h2 span", {
+    color:"#52300f",
+    stagger: 0.2
+})
