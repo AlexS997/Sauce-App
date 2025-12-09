@@ -122,3 +122,23 @@ tl2.from("#headingDiv h2", {
     color:"#52300f",
     stagger: 0.2
 })
+
+const tl3 = gsap.timeline({
+    scrollTrigger:{
+        trigger: ".page3",
+        start: "5% 95%",
+        end: "95% 95%",
+        scrub: true
+    }
+})
+
+tl3.from(".page3 h2", {
+    color:"#c8852d",
+    stagger: 0.2,
+    duration: 0.2
+})
+.to(".box .card", {
+    rotate: "0deg",
+    stagger: 0.5,
+    duration: 0.5
+})
